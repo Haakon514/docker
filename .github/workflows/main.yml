@@ -27,7 +27,10 @@ jobs:
       
       # Docker Hub login and push for Docker Hub 
       - name: Log in to Docker Hub and push image
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         run: |
-          docker login
+          echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
           docker tag hagu021 hagu021/image:latest
           docker push hagu021/image:latest
