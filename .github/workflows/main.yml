@@ -1,3 +1,4 @@
+#push image to docker hub and ecr on push to main branh
 name: Publish Docker image
 
 on:
