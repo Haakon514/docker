@@ -23,5 +23,3 @@ jobs:
           docker build . -t hagu021
           docker tag hagu021 244530008913.dkr.ecr.eu-west-1.amazonaws.com/hagu021/docker-container:$rev
           docker push 244530008913.dkr.ecr.eu-west-1.amazonaws.com/hagu021/docker-container:$rev
-          docker tag hagu021 hagu021/image
-          docker push hagu021/image:latest
